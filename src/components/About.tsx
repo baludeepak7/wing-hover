@@ -1,38 +1,46 @@
 import React from 'react';
-import { Target, Users, Award, Globe } from 'lucide-react';
+import { Cloud, Shield, Zap, Globe, Users, Award } from 'lucide-react';
 import DroneManufacturing from '../assets/dronemanufacturing.jpg';
 
 const About = () => {
-  const values = [
+  const capabilities = [
     {
-      icon: Target,
-      title: "Mission",
-      description: "To provide cutting-edge indigenous drone technology solutions that enhance national security, defense capabilities, and surveillance operations."
+      icon: Cloud,
+      title: "Digital Transformation",
+      description: "10+ years of cloud modernization, data engineering, and enterprise IT consulting expertise."
     },
     {
-      icon: Users,
-      title: "Expert Team",
-      description: "Our multidisciplinary team combines aerospace engineers, AI specialists, and defense experts with decades of combined experience."
+      icon: Shield,
+      title: "UAV Defense Innovation",
+      description: "Cutting-edge drone technology aligned with Atmanirbhar Bharat for India's defense needs."
     },
     {
-      icon: Award,
-      title: "Certifications",
-      description: "ISO 9001:2015 certified with DGCA approvals and military-grade security clearances for sensitive defense projects."
+      icon: Zap,
+      title: "AI & Intelligence Systems",
+      description: "Advanced C4i command software, surveillance systems, and battlefield intelligence solutions."
     },
     {
       icon: Globe,
-      title: "Indigenous Innovation",
-      description: "Proudly developing world-class drone technology with local expertise, contributing to national self-reliance in defense."
+      title: "End-to-End Engineering",
+      description: "From concept to deployment - complete system integration and OEM manufacturing capabilities."
     }
+  ];
+
+  const stats = [
+    { value: "10+", label: "Years IT Experience" },
+    { value: "50+", label: "UAV Models Developed" },
+    { value: "24/7", label: "Mission Support" },
+    { value: "100%", label: "India-First Approach" }
   ];
 
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-800">About Wing Hover</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Leading the future of indigenous drone technology with innovative solutions for defense, security, and surveillance applications
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-800">About OptiValue Tek</h2>
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            OptiValue Tek is a dual-domain powerhouse—pioneering digital transformation and UAV innovation in India. 
+            With over a decade of IT consulting experience and a bold foray into drone tech, we lead enterprise and defense-grade engineering missions.
           </p>
         </div>
 
@@ -40,51 +48,47 @@ const About = () => {
           <div>
             <img 
               src={DroneManufacturing}
-              alt="Drone manufacturing facility"
-             className="w-full max-h-[500px] h-auto rounded-2xl shadow-2xl object-cover"
+              alt="OptiValue Tek engineering facility"
+              className="w-full max-h-[500px] h-auto rounded-2xl shadow-2xl object-cover"
             />
           </div>
           <div>
-            <h3 className="text-3xl font-bold mb-6 text-teal-600">Pioneering Indigenous Technology</h3>
+            <h3 className="text-3xl font-bold mb-6 text-blue-600">Dual-Domain Excellence</h3>
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Founded with the vision of achieving technological self-reliance, Wing Hover has emerged as a leading manufacturer of indigenous drone systems. Our commitment to innovation and excellence has made us a trusted partner for defense and security organizations.
+              Born from a decade of digital transformation leadership, OptiValue Tek has evolved into India's premier UAV and defense technology innovator. 
+              Our unique combination of enterprise IT expertise and cutting-edge drone engineering positions us at the forefront of India's technological sovereignty.
             </p>
-            <p className="text-slate-600 text-lg leading-relaxed">
-              We specialize in developing high-performance unmanned aerial vehicles (UAVs) that meet the stringent requirements of modern defense and surveillance operations. Our drones are designed and manufactured entirely in-house, ensuring complete control over quality and security.
+            <p className="text-slate-600 text-lg leading-relaxed mb-6">
+              We specialize in mission-critical UAV systems, anti-drone defense solutions, and AI-powered intelligence platforms. 
+              Every solution is designed with Atmanirbhar Bharat principles, ensuring complete indigenous capability and strategic independence.
             </p>
+            <div className="flex items-center space-x-4">
+              <Award className="h-8 w-8 text-orange-500" />
+              <span className="text-lg font-semibold text-slate-700">DGCA Certified | Defense Grade Security</span>
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((value, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {capabilities.map((capability, index) => (
             <div key={index} className="bg-gray-50 p-8 rounded-xl hover:bg-gray-100 transition-all duration-300 group shadow-md">
               <div className="mb-4">
-                <value.icon className="h-12 w-12 text-teal-600 group-hover:text-orange-500 transition-colors" />
+                <capability.icon className="h-12 w-12 text-blue-600 group-hover:text-orange-500 transition-colors" />
               </div>
-              <h4 className="text-xl font-bold mb-4 text-slate-800">{value.title}</h4>
-              <p className="text-slate-600 leading-relaxed">{value.description}</p>
+              <h4 className="text-xl font-bold mb-4 text-slate-800">{capability.title}</h4>
+              <p className="text-slate-600 leading-relaxed">{capability.description}</p>
             </div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 text-center">
-          <div>
-            <div className="text-4xl lg:text-5xl font-bold text-teal-600 mb-2">500+</div>
-            <div className="text-slate-600">Drones Deployed</div>
-          </div>
-          <div>
-            <div className="text-4xl lg:text-5xl font-bold text-orange-500 mb-2">50+</div>
-            <div className="text-slate-600">Defense Contracts</div>
-          </div>
-          <div>
-            <div className="text-4xl lg:text-5xl font-bold text-teal-600 mb-2">24/7</div>
-            <div className="text-slate-600">Support Service</div>
-          </div>
-          <div>
-            <div className="text-4xl lg:text-5xl font-bold text-orange-500 mb-2">99.9%</div>
-            <div className="text-slate-600">Mission Success</div>
-          </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          {stats.map((stat, index) => (
+            <div key={index}>
+              <div className="text-4xl lg:text-5xl font-bold text-blue-600 mb-2">{stat.value}</div>
+              <div className="text-slate-600">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

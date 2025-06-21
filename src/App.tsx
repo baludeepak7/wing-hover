@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Products from './components/Products';
-import UseCases from './components/UseCases';
-import CaseStudies from './components/CaseStudies';
+import UAVOfferings from './components/UAVOfferings';
+import DefenseSystems from './components/DefenseSystems';
+import Agriculture from './components/Agriculture';
+import Mobility from './components/Mobility';
+import Intelligence from './components/Intelligence';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -19,16 +21,19 @@ function App() {
             <>
               <Hero />
               <About />
-              <Products />
-              <UseCases />
-              <CaseStudies />
+              <UAVOfferings />
+              <DefenseSystems />
+              <Agriculture />
+              <Mobility />
+              <Intelligence />
               <Contact />
             </>
           } />
           <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/use-cases" element={<UseCases />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/uav-offerings" element={<UAVOfferings />} />
+          <Route path="/defense-systems" element={<DefenseSystems />} />
+          <Route path="/agriculture" element={<Agriculture />} />
+          <Route path="/intelligence" element={<Intelligence />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

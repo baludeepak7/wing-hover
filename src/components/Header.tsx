@@ -18,7 +18,7 @@ const Header = () => {
       timeout = setTimeout(() => {
         setIsScrolled(window.scrollY > 50);
 
-        const sections = ['about', 'products', 'case-studies', 'use-cases', 'contact'];
+        const sections = ['about', 'uav-offerings', 'defense-systems', 'agriculture', 'mobility', 'intelligence', 'contact'];
         for (const id of sections) {
           const el = document.getElementById(id);
           if (el) {
@@ -45,7 +45,6 @@ const Header = () => {
       return;
     }
 
-    // Delay scroll to ensure DOM is ready
     setTimeout(() => {
       const element = document.getElementById(sectionId);
       element?.scrollIntoView({ behavior: 'smooth' });
@@ -53,15 +52,16 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: 'About us', id: 'about' },
-    { name: 'Products', id: 'products' },
-    { name: 'Case Studies', id: 'case-studies' },
-    { name: 'Services', id: 'use-cases' },
+    { name: 'About', id: 'about' },
+    { name: 'UAV Solutions', id: 'uav-offerings' },
+    { name: 'Defense Systems', id: 'defense-systems' },
+    { name: 'Agriculture', id: 'agriculture' },
+    { name: 'Intelligence', id: 'intelligence' },
   ];
 
   const navButtonClass = (id: string) =>
-    `text-slate-600 hover:text-teal-700 transition-colors font-medium focus:outline-none focus:ring-0 ${
-      activeSection === id ? 'underline underline-offset-4 decoration-2 text-teal-700' : ''
+    `text-slate-600 hover:text-blue-700 transition-colors font-medium focus:outline-none focus:ring-0 ${
+      activeSection === id ? 'underline underline-offset-4 decoration-2 text-blue-700' : ''
     }`;
 
   return (
@@ -74,11 +74,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <img src={ShieldPng} alt="Wing Hover logo" width={60} height={60} /> 
+              <img src={ShieldPng} alt="OptiValue Tek logo" width={50} height={50} /> 
             </div>
             <div>
-              <span className="text-2xl font-bold text-slate-800">WING</span>
-              <span className="text-2xl font-bold text-teal-600">HOVER</span>
+              <span className="text-xl font-bold text-slate-800">OPTIVALUE</span>
+              <span className="text-xl font-bold text-blue-600">TEK</span>
             </div>
           </Link>
 
@@ -94,9 +94,9 @@ const Header = () => {
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
             >
-              Contact us
+              Contact Team
             </button>
           </div>
 
@@ -117,8 +117,8 @@ const Header = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-md font-medium transition-colors ${
                     activeSection === item.id
-                      ? 'text-teal-700 underline underline-offset-4'
-                      : 'text-slate-600 hover:text-teal-700 hover:bg-gray-50'
+                      ? 'text-blue-700 underline underline-offset-4'
+                      : 'text-slate-600 hover:text-blue-700 hover:bg-gray-50'
                   }`}
                 >
                   {item.name}
@@ -126,9 +126,9 @@ const Header = () => {
               ))}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-md font-medium transition-colors"
+                className="block w-full text-left px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-colors"
               >
-                Contact us
+                Contact Team
               </button>
             </div>
           </div>

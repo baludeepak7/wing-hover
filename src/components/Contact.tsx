@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, User } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,11 +22,9 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
     
-    // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
@@ -41,23 +39,61 @@ const Contact = () => {
     }, 3000);
   };
 
+  const teamMembers = [
+    {
+      name: "Ashish Kumar",
+      role: "Technical Director",
+      email: "ashish.kumar@optivaluetek.com",
+      phone: "+91 98765 43210",
+      specialization: "UAV Systems & Defense Tech"
+    },
+    {
+      name: "Ragini Jha",
+      role: "Operations Director",
+      email: "ragini.jha@optivaluetek.com",
+      phone: "+91 98765 43211",
+      specialization: "Project Management & Delivery"
+    },
+    {
+      name: "Alok Mishra",
+      role: "Finance Director",
+      email: "alok.mishra@optivaluetek.com",
+      phone: "+91 98765 43212",
+      specialization: "Financial Planning & Contracts"
+    },
+    {
+      name: "Shyla Mahendra",
+      role: "Compliance Director",
+      email: "shyla.mahendra@optivaluetek.com",
+      phone: "+91 98765 43213",
+      specialization: "Regulatory & Quality Assurance"
+    },
+    {
+      name: "Prosenjit Bose",
+      role: "HR Director",
+      email: "prosenjit.bose@optivaluetek.com",
+      phone: "+91 98765 43214",
+      specialization: "Human Resources & Talent"
+    }
+  ];
+
   const contactInfo = [
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 80 2345 6789", "+91 80 2345 6790"],
+      details: ["+91 80 4567 8900", "+91 80 4567 8901"],
       subtitle: "24/7 Support Available"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@winghover.com", "support@winghover.com"],
+      details: ["info@optivaluetek.com", "support@optivaluetek.com"],
       subtitle: "Response within 4 hours"
     },
     {
       icon: MapPin,
       title: "Headquarters",
-      details: ["Wing Hover Technologies", "Electronic City, Bangalore - 560100"],
+      details: ["OptiValue Tek Private Limited", "Electronic City, Bangalore - 560100"],
       subtitle: "Karnataka, India"
     },
     {
@@ -72,10 +108,45 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-800">Get In Touch</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-800">Contact Our Team</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to discuss your drone technology requirements? Our experts are here to help you find the perfect solution.
+            Ready to discuss your UAV technology or digital transformation requirements? Our experts are here to help you find the perfect solution.
           </p>
+        </div>
+
+        {/* Team Members */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-center mb-8 text-slate-800">Leadership Team</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <User className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-800">{member.name}</h4>
+                    <p className="text-sm text-blue-600">{member.role}</p>
+                  </div>
+                </div>
+                <p className="text-xs text-slate-500 mb-3">{member.specialization}</p>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Mail className="h-4 w-4 text-slate-400" />
+                    <a href={`mailto:${member.email}`} className="text-sm text-slate-600 hover:text-blue-600">
+                      {member.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Phone className="h-4 w-4 text-slate-400" />
+                    <a href={`tel:${member.phone}`} className="text-sm text-slate-600 hover:text-blue-600">
+                      {member.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -85,7 +156,7 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-xl">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-teal-600 p-3 rounded-lg">
+                    <div className="bg-blue-600 p-3 rounded-lg">
                       <info.icon className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -100,12 +171,12 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="mt-8 bg-gradient-to-r from-teal-600 to-teal-700 p-6 rounded-xl">
+            <div className="mt-8 bg-gradient-to-r from-blue-600 to-blue-700 p-6 rounded-xl">
               <h3 className="text-lg font-semibold mb-2 text-white">Emergency Support</h3>
-              <p className="text-teal-100 text-sm mb-3">
+              <p className="text-blue-100 text-sm mb-3">
                 For urgent technical support or mission-critical assistance
               </p>
-              <p className="text-white font-semibold">+91 98765 43210</p>
+              <p className="text-white font-semibold">+91 98765 43200</p>
             </div>
           </div>
 
@@ -126,7 +197,7 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                         placeholder="Your full name"
                       />
                     </div>
@@ -141,7 +212,7 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -158,7 +229,7 @@ const Contact = () => {
                         name="organization"
                         value={formData.organization}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                         placeholder="Your organization"
                       />
                     </div>
@@ -172,7 +243,7 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                         placeholder="+91 98765 43210"
                       />
                     </div>
@@ -188,13 +259,14 @@ const Contact = () => {
                         name="requirements"
                         value={formData.requirements}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                       >
                         <option value="general">General Inquiry</option>
-                        <option value="defense">Defense Solutions</option>
-                        <option value="surveillance">Surveillance Systems</option>
+                        <option value="uav">UAV Solutions</option>
+                        <option value="defense">Defense Systems</option>
+                        <option value="agriculture">Agricultural Drones</option>
+                        <option value="digital">Digital Transformation</option>
                         <option value="custom">Custom Development</option>
-                        <option value="support">Technical Support</option>
                         <option value="partnership">Partnership</option>
                       </select>
                     </div>
@@ -209,7 +281,7 @@ const Contact = () => {
                         required
                         value={formData.subject}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                         placeholder="Brief subject line"
                       />
                     </div>
@@ -226,14 +298,14 @@ const Contact = () => {
                       rows={6}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                       placeholder="Please describe your requirements, timeline, and any specific questions you have..."
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 group"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 group"
                   >
                     <Send className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     <span>Send Message</span>
