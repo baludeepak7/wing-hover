@@ -60,8 +60,8 @@ const Header = () => {
   ];
 
   const navButtonClass = (id: string) =>
-    `text-slate-600 hover:text-blue-700 transition-colors font-medium focus:outline-none focus:ring-0 ${
-      activeSection === id ? 'underline underline-offset-4 decoration-2 text-blue-700' : ''
+    `text-slate-600 hover:text-teal-600 transition-colors font-medium focus:outline-none focus:ring-0 ${
+      activeSection === id ? 'underline underline-offset-4 decoration-2 text-teal-600' : ''
     }`;
 
   return (
@@ -74,11 +74,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <img src={ShieldPng} alt="OptiValue Tek logo" width={50} height={50} /> 
+              <img src={ShieldPng} alt="WINGHOVER logo" width={50} height={50} /> 
             </div>
             <div>
-              <span className="text-xl font-bold text-slate-800">OPTIVALUE</span>
-              <span className="text-xl font-bold text-blue-600">TEK</span>
+              <span className="text-xl font-bold text-slate-800">WING</span>
+              <span className="text-xl font-bold text-teal-600">HOVER</span>
             </div>
           </Link>
 
@@ -94,7 +94,7 @@ const Header = () => {
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+              className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
             >
               Contact Team
             </button>
@@ -117,8 +117,8 @@ const Header = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-md font-medium transition-colors ${
                     activeSection === item.id
-                      ? 'text-blue-700 underline underline-offset-4'
-                      : 'text-slate-600 hover:text-blue-700 hover:bg-gray-50'
+                      ? 'text-teal-600 underline underline-offset-4'
+                      : 'text-slate-600 hover:text-teal-600 hover:bg-gray-50'
                   }`}
                 >
                   {item.name}
@@ -126,7 +126,7 @@ const Header = () => {
               ))}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-colors"
+                className="block w-full text-left px-3 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-md font-medium transition-colors"
               >
                 Contact Team
               </button>

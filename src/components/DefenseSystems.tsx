@@ -140,7 +140,7 @@ const DefenseSystems = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-blue-600">{system.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-teal-600">{system.title}</h3>
                 <p className="text-slate-600 mb-4 leading-relaxed text-sm">{system.description}</p>
                 
                 <div className="mb-4">
@@ -148,7 +148,7 @@ const DefenseSystems = () => {
                   <div className="space-y-1">
                     {system.specs.map((spec, specIndex) => (
                       <div key={specIndex} className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-teal-600 rounded-full"></div>
                         <span className="text-xs text-slate-600">{spec}</span>
                       </div>
                     ))}
@@ -167,7 +167,7 @@ const DefenseSystems = () => {
                   </div>
                 </div>
                 
-                <button className="w-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2 rounded-lg font-medium text-sm transition-all duration-300">
+                <button className="w-full border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white py-2 rounded-lg font-medium text-sm transition-all duration-300">
                   Request Demo
                 </button>
               </div>
@@ -175,12 +175,12 @@ const DefenseSystems = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-center">
+        <div className="mt-16 bg-gradient-to-r from-teal-600 to-teal-700 rounded-2xl p-8 text-center">
           <h3 className="text-3xl font-bold mb-4 text-white">Integrated Defense Solutions</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto text-lg">
+          <p className="text-teal-100 mb-6 max-w-2xl mx-auto text-lg">
             Our defense systems work together as a unified platform, providing layered security and comprehensive threat response capabilities.
           </p>
-          <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
             Schedule System Integration Briefing
           </button>
         </div>

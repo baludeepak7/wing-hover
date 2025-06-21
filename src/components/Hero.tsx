@@ -32,21 +32,21 @@ const Hero = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-8 leading-tight text-center text-white drop-shadow-lg animate-fade-in-up">
             Engineering India's 
-            <span className="text-blue-400 block mt-2">UAV Future</span>
+            <span className="text-teal-400 block mt-2">UAV Future</span>
           </h1>
 
-          <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 drop-shadow-md mb-6 max-w-4xl mx-auto text-center leading-relaxed animate-fade-in-up delay-[200ms]">
+          <p className="text-lg sm:text-xl lg:text-2xl text-teal-100 drop-shadow-md mb-6 max-w-4xl mx-auto text-center leading-relaxed animate-fade-in-up delay-[200ms]">
             Backed by Digital Brilliance
           </p>
 
           <p className="text-base sm:text-lg text-gray-200 drop-shadow-md mb-12 max-w-3xl mx-auto text-center leading-relaxed animate-fade-in-up delay-[400ms]">
-            From cloud-native modernization to battlefield-ready drones, OptiValue Tek delivers end-to-end technology for tomorrow.
+            From cloud-native modernization to battlefield-ready drones, WINGHOVER delivers end-to-end technology for tomorrow.
           </p>
 
           {/* Key Expertise Areas */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
             <div className="flex items-center space-x-3 bg-white/90 backdrop-blur-sm px-6 py-4 rounded-lg shadow-lg">
-              <Cloud className="h-8 w-8 text-blue-600" />
+              <Cloud className="h-8 w-8 text-teal-600" />
               <span className="text-lg font-semibold text-slate-700">Digital Transformation</span>
             </div>
             <div className="flex items-center space-x-3 bg-white/90 backdrop-blur-sm px-6 py-4 rounded-lg shadow-lg">
@@ -63,7 +63,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <button 
               onClick={() => document.getElementById('uav-offerings')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center space-x-2 group shadow-lg"
+              className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center space-x-2 group shadow-lg"
             >
               <span>Explore UAVs</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />

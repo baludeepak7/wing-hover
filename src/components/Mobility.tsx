@@ -25,7 +25,7 @@ const Mobility = () => {
 
   const motorSpecs = [
     {
-      model: "OVT-17.5K",
+      model: "WH-17.5K",
       power: "17.5kW",
       cooling: "Air-cooled",
       application: "Light UAV",
@@ -33,7 +33,7 @@ const Mobility = () => {
       weight: "2.8kg"
     },
     {
-      model: "OVT-35K",
+      model: "WH-35K",
       power: "35kW",
       cooling: "Liquid-cooled",
       application: "Medium UAV",
@@ -41,7 +41,7 @@ const Mobility = () => {
       weight: "5.2kg"
     },
     {
-      model: "OVT-50K",
+      model: "WH-50K",
       power: "50kW",
       cooling: "Hybrid-cooled",
       application: "Heavy UAV",
@@ -64,7 +64,7 @@ const Mobility = () => {
           {/* Protection Gear */}
           <div className="bg-gray-50 rounded-2xl p-8">
             <div className="flex items-center space-x-3 mb-6">
-              <Shield className="h-8 w-8 text-blue-600" />
+              <Shield className="h-8 w-8 text-teal-600" />
               <h3 className="text-2xl font-bold text-slate-800">Tactical Protection</h3>
             </div>
             
@@ -74,7 +74,7 @@ const Mobility = () => {
                 <ul className="space-y-2">
                   {category.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                      <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
                       <span className="text-slate-600">{item}</span>
                     </li>
                   ))}
@@ -87,7 +87,7 @@ const Mobility = () => {
               <div className="grid grid-cols-5 gap-2">
                 {['BR1', 'BR2', 'BR3', 'BR4', 'BR5'].map((level, index) => (
                   <div key={index} className="text-center">
-                    <div className="bg-blue-600 text-white px-2 py-1 rounded text-sm font-medium">
+                    <div className="bg-teal-600 text-white px-2 py-1 rounded text-sm font-medium">
                       {level}
                     </div>
                   </div>
@@ -107,7 +107,7 @@ const Mobility = () => {
               {motorSpecs.map((motor, index) => (
                 <div key={index} className="bg-white p-4 rounded-lg shadow-md">
                   <div className="flex justify-between items-center mb-2">
-                    <h4 className="font-bold text-blue-600">{motor.model}</h4>
+                    <h4 className="font-bold text-teal-600">{motor.model}</h4>
                     <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs">
                       {motor.application}
                     </span>
@@ -159,7 +159,7 @@ const Mobility = () => {
             From tactical gear customization to UAV motor integration, we provide end-to-end engineering and manufacturing support.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            <button className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
               Request Protection Gear Catalog
             </button>
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">

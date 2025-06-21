@@ -37,9 +37,9 @@ const About = () => {
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-800">About OptiValue Tek</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-slate-800">About WINGHOVER</h2>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            OptiValue Tek is a dual-domain powerhouse—pioneering digital transformation and UAV innovation in India. 
+            WINGHOVER is a dual-domain powerhouse—pioneering digital transformation and UAV innovation in India. 
             With over a decade of IT consulting experience and a bold foray into drone tech, we lead enterprise and defense-grade engineering missions.
           </p>
         </div>
@@ -48,14 +48,14 @@ const About = () => {
           <div>
             <img 
               src={DroneManufacturing}
-              alt="OptiValue Tek engineering facility"
+              alt="WINGHOVER engineering facility"
               className="w-full max-h-[500px] h-auto rounded-2xl shadow-2xl object-cover"
             />
           </div>
           <div>
-            <h3 className="text-3xl font-bold mb-6 text-blue-600">Dual-Domain Excellence</h3>
+            <h3 className="text-3xl font-bold mb-6 text-teal-600">Dual-Domain Excellence</h3>
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Born from a decade of digital transformation leadership, OptiValue Tek has evolved into India's premier UAV and defense technology innovator. 
+              Born from a decade of digital transformation leadership, WINGHOVER has evolved into India's premier UAV and defense technology innovator. 
               Our unique combination of enterprise IT expertise and cutting-edge drone engineering positions us at the forefront of India's technological sovereignty.
             </p>
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
@@ -73,7 +73,7 @@ const About = () => {
           {capabilities.map((capability, index) => (
             <div key={index} className="bg-gray-50 p-8 rounded-xl hover:bg-gray-100 transition-all duration-300 group shadow-md">
               <div className="mb-4">
-                <capability.icon className="h-12 w-12 text-blue-600 group-hover:text-orange-500 transition-colors" />
+                <capability.icon className="h-12 w-12 text-teal-600 group-hover:text-orange-500 transition-colors" />
               </div>
               <h4 className="text-xl font-bold mb-4 text-slate-800">{capability.title}</h4>
               <p className="text-slate-600 leading-relaxed">{capability.description}</p>
@@ -85,7 +85,7 @@ const About = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
             <div key={index}>
-              <div className="text-4xl lg:text-5xl font-bold text-blue-600 mb-2">{stat.value}</div>
+              <div className="text-4xl lg:text-5xl font-bold text-teal-600 mb-2">{stat.value}</div>
               <div className="text-slate-600">{stat.label}</div>
             </div>
           ))}

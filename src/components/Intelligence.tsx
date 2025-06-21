@@ -72,7 +72,7 @@ const Intelligence = () => {
           {intelligenceSystems.map((system, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="mb-4">
-                <system.icon className="h-10 w-10 text-blue-600 group-hover:text-orange-500 transition-colors" />
+                <system.icon className="h-10 w-10 text-teal-600 group-hover:text-orange-500 transition-colors" />
               </div>
               <h4 className="text-lg font-bold mb-3 text-slate-800">{system.title}</h4>
               <p className="text-slate-600 text-sm mb-4 leading-relaxed">{system.description}</p>
@@ -80,7 +80,7 @@ const Intelligence = () => {
               <ul className="space-y-2">
                 {system.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-teal-600 rounded-full"></div>
                     <span className="text-xs text-slate-600">{feature}</span>
                   </li>
                 ))}
@@ -92,7 +92,7 @@ const Intelligence = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="flex items-center space-x-3 mb-6">
-              <Cpu className="h-8 w-8 text-blue-600" />
+              <Cpu className="h-8 w-8 text-teal-600" />
               <h3 className="text-2xl font-bold text-slate-800">C4i Command Center</h3>
             </div>
             
@@ -110,12 +110,12 @@ const Intelligence = () => {
               ))}
             </div>
 
-            <button className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors">
+            <button className="mt-6 w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-lg font-semibold transition-colors">
               Request C4i Demo
             </button>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-6">System Engineering Services</h3>
             
             <div className="space-y-4 mb-6">
@@ -125,7 +125,7 @@ const Intelligence = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Custom Integration</h4>
-                  <p className="text-blue-100 text-sm">Tailored system architecture and integration</p>
+                  <p className="text-teal-100 text-sm">Tailored system architecture and integration</p>
                 </div>
               </div>
               
@@ -135,7 +135,7 @@ const Intelligence = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">AI Development</h4>
-                  <p className="text-blue-100 text-sm">Custom AI models and algorithms</p>
+                  <p className="text-teal-100 text-sm">Custom AI models and algorithms</p>
                 </div>
               </div>
               
@@ -145,12 +145,12 @@ const Intelligence = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Security Implementation</h4>
-                  <p className="text-blue-100 text-sm">Military-grade security protocols</p>
+                  <p className="text-teal-100 text-sm">Military-grade security protocols</p>
                 </div>
               </div>
             </div>
 
-            <button className="w-full bg-white text-blue-600 hover:bg-gray-100 py-3 rounded-lg font-semibold transition-colors">
+            <button className="w-full bg-white text-teal-600 hover:bg-gray-100 py-3 rounded-lg font-semibold transition-colors">
               Discuss Engineering Requirements
             </button>
           </div>

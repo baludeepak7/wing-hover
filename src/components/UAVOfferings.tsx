@@ -152,14 +152,14 @@ const UAVOfferings = () => {
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {product.category}
                   </span>
                 </div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-blue-600">{product.name}</h3>
+                <h3 className="text-xl font-bold mb-4 text-teal-600">{product.name}</h3>
                 
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold mb-3 text-orange-500 uppercase tracking-wide">Specifications</h4>
@@ -184,14 +184,14 @@ const UAVOfferings = () => {
                   <ul className="space-y-1">
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start space-x-2">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-1.5 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-teal-600 rounded-full mt-1.5 flex-shrink-0"></div>
                         <span className="text-slate-600 text-xs">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-[1.02]">
+                <button className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-[1.02]">
                   Request Technical Brief
                 </button>
               </div>

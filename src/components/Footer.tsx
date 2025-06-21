@@ -35,8 +35,8 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div>
-                <span className="text-2xl font-bold text-white">OPTIVALUE</span>
-                <span className="text-2xl font-bold text-blue-400">TEK</span>
+                <span className="text-2xl font-bold text-white">WING</span>
+                <span className="text-2xl font-bold text-teal-400">HOVER</span>
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -45,15 +45,15 @@ const Footer = () => {
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">info@optivaluetek.com</span>
+                <Mail className="h-5 w-5 text-teal-400" />
+                <span className="text-gray-300">info@winghover.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-blue-400" />
+                <Phone className="h-5 w-5 text-teal-400" />
                 <span className="text-gray-300">+91 80 4567 8900</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-blue-400" />
+                <MapPin className="h-5 w-5 text-teal-400" />
                 <span className="text-gray-300">Electronic City, Bangalore</span>
               </div>
             </div>
@@ -67,7 +67,7 @@ const Footer = () => {
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-teal-400 transition-colors"
                   >
                     {link.name}
                   </button>
@@ -84,7 +84,7 @@ const Footer = () => {
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(solution.href)}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-teal-400 transition-colors"
                   >
                     {solution.name}
                   </button>
@@ -98,7 +98,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-4 md:mb-0">
               <p className="text-gray-400 text-sm">
-                © {currentYear} OptiValue Tek Private Limited. All rights reserved.
+                © {currentYear} WINGHOVER Private Limited. All rights reserved.
               </p>
               <div className="flex space-x-6 text-sm">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
@@ -110,13 +110,13 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <span className="text-gray-400 text-sm">Follow us:</span>
               <div className="flex space-x-3">
-                <a href="#" className="p-2 bg-slate-700 hover:bg-blue-600 rounded-lg transition-colors group">
+                <a href="#" className="p-2 bg-slate-700 hover:bg-teal-600 rounded-lg transition-colors group">
                   <Linkedin className="h-5 w-5 text-gray-400 group-hover:text-white" />
                 </a>
-                <a href="#" className="p-2 bg-slate-700 hover:bg-blue-600 rounded-lg transition-colors group">
+                <a href="#" className="p-2 bg-slate-700 hover:bg-teal-600 rounded-lg transition-colors group">
                   <Twitter className="h-5 w-5 text-gray-400 group-hover:text-white" />
                 </a>
-                <a href="#" className="p-2 bg-slate-700 hover:bg-blue-600 rounded-lg transition-colors group">
+                <a href="#" className="p-2 bg-slate-700 hover:bg-teal-600 rounded-lg transition-colors group">
                   <Youtube className="h-5 w-5 text-gray-400 group-hover:text-white" />
                 </a>
               </div>
