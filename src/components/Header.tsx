@@ -60,8 +60,8 @@ const Header = () => {
   ];
 
   const navButtonClass = (id: string) =>
-    `text-slate-600 hover:text-teal-600 transition-colors font-medium focus:outline-none focus:ring-0 ${
-      activeSection === id ? 'underline underline-offset-4 decoration-2 text-teal-600' : ''
+    `text-slate-600 hover:text-teal-600 transition-colors font-medium focus:outline-none focus:ring-0 whitespace-nowrap ${
+      activeSection === id ? 'text-teal-600 border-b-2 border-teal-600' : ''
     }`;
 
   return (
@@ -72,17 +72,19 @@ const Header = () => {
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" className="flex items-center space-x-3 group">
+          {/* Logo Section */}
+          <Link to="/" className="flex items-center space-x-3 group flex-shrink-0">
             <div className="relative">
-              <img src={ShieldPng} alt="WINGHOVER logo" width={50} height={50} /> 
+              <img src={ShieldPng} alt="WINGHOVER logo" className="w-10 h-10 lg:w-12 lg:h-12" /> 
             </div>
-            <div>
-              <span className="text-xl font-bold text-slate-800">WING</span>
-              <span className="text-xl font-bold text-teal-600">HOVER</span>
+            <div className="flex items-center">
+              <span className="text-xl lg:text-2xl font-bold text-slate-800">WING</span>
+              <span className="text-xl lg:text-2xl font-bold text-teal-600">HOVER</span>
             </div>
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8 xl:space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -94,12 +96,13 @@ const Header = () => {
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+              className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ml-4"
             >
               Contact Team
             </button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 text-slate-600 hover:text-slate-800 transition-colors"
@@ -108,16 +111,17 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg mt-2 shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg mt-2 shadow-lg border border-gray-100">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-md font-medium transition-colors ${
                     activeSection === item.id
-                      ? 'text-teal-600 underline underline-offset-4'
+                      ? 'text-teal-600 bg-teal-50'
                       : 'text-slate-600 hover:text-teal-600 hover:bg-gray-50'
                   }`}
                 >
@@ -126,7 +130,7 @@ const Header = () => {
               ))}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-md font-medium transition-colors"
+                className="block w-full text-left px-3 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-md font-medium transition-colors mt-2"
               >
                 Contact Team
               </button>
