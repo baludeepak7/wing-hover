@@ -3,6 +3,11 @@ import { Shield, Radar, Zap, Radio, Eye, Target } from 'lucide-react';
 import csborder from '../assets/cs_border.png';
 
 const DefenseSystems = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const defenseSystems = [
     {
       icon: Radar,
@@ -167,7 +172,10 @@ const DefenseSystems = () => {
                   </div>
                 </div>
                 
-                <button className="w-full border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white py-2 rounded-lg font-medium text-sm transition-all duration-300">
+                <button 
+                  onClick={scrollToContact}
+                  className="w-full border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white py-2 rounded-lg font-medium text-sm transition-all duration-300"
+                >
                   Request Demo
                 </button>
               </div>
@@ -180,7 +188,10 @@ const DefenseSystems = () => {
           <p className="text-teal-100 mb-6 max-w-2xl mx-auto text-lg">
             Our defense systems work together as a unified platform, providing layered security and comprehensive threat response capabilities.
           </p>
-          <button className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button 
+            onClick={scrollToContact}
+            className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
             Schedule System Integration Briefing
           </button>
         </div>

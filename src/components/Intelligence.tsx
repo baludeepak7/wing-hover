@@ -2,6 +2,11 @@ import React from 'react';
 import { Eye, Brain, Network, Shield, Cpu, Satellite } from 'lucide-react';
 
 const Intelligence = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const intelligenceSystems = [
     {
       icon: Eye,
@@ -110,7 +115,10 @@ const Intelligence = () => {
               ))}
             </div>
 
-            <button className="mt-6 w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-lg font-semibold transition-colors">
+            <button 
+              onClick={scrollToContact}
+              className="mt-6 w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-lg font-semibold transition-colors"
+            >
               Request C4i Demo
             </button>
           </div>
@@ -150,7 +158,10 @@ const Intelligence = () => {
               </div>
             </div>
 
-            <button className="w-full bg-white text-teal-600 hover:bg-gray-100 py-3 rounded-lg font-semibold transition-colors">
+            <button 
+              onClick={scrollToContact}
+              className="w-full bg-white text-teal-600 hover:bg-gray-100 py-3 rounded-lg font-semibold transition-colors"
+            >
               Discuss Engineering Requirements
             </button>
           </div>
@@ -163,7 +174,10 @@ const Intelligence = () => {
               Complete OEM services from component manufacturing to system integration. 
               We partner with defense contractors and system integrators to deliver mission-critical solutions.
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button 
+              onClick={scrollToContact}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
               Explore OEM Partnership
             </button>
           </div>

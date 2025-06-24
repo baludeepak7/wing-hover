@@ -3,6 +3,11 @@ import { Cloud, Shield, Zap, Globe, Users, Award } from 'lucide-react';
 import DroneManufacturing from '../assets/dronemanufacturing.jpg';
 
 const About = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const capabilities = [
     {
       icon: Cloud,

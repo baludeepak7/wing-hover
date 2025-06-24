@@ -3,6 +3,11 @@ import { Leaf, Droplets, BarChart3, MapPin, Clock, Shield } from 'lucide-react';
 import forestdrone from '../assets/drone_forest.jpg';
 
 const Agriculture = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const agriFeatures = [
     {
       icon: Leaf,
@@ -72,7 +77,10 @@ const Agriculture = () => {
               ))}
             </div>
 
-            <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button 
+              onClick={scrollToContact}
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
               Get Krishi 3 Pro Details
             </button>
           </div>
@@ -133,7 +141,10 @@ const Agriculture = () => {
                   <span className="font-semibold">✓ Included</span>
                 </div>
               </div>
-              <button className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors">
+              <button 
+                onClick={scrollToContact}
+                className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition-colors"
+              >
                 Request Agriculture Package
               </button>
             </div>

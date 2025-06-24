@@ -9,8 +9,13 @@ const Hero = () => {
     setIsVisible(true);
   }, []);
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-100">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-100 pt-20">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 overflow-hidden">
         <video
@@ -69,7 +74,7 @@ const Hero = () => {
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={scrollToContact}
               className="border-2 border-white text-white hover:bg-white hover:text-slate-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg"
             >
               Contact Our Team

@@ -4,6 +4,11 @@ import survereilance from '../assets/drone_surv.jpg';
 import securityDrone from '../assets/dronesecurity.png';
 
 const UAVOfferings = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const uavProducts = [
     {
       name: "Tethered Surveillance Drone",
@@ -191,7 +196,10 @@ const UAVOfferings = () => {
                   </ul>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-[1.02]">
+                <button 
+                  onClick={scrollToContact}
+                  className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-[1.02]"
+                >
                   Request Technical Brief
                 </button>
               </div>
@@ -205,7 +213,10 @@ const UAVOfferings = () => {
             <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
               Need specialized UAV capabilities? Our engineering team develops custom solutions tailored to your mission requirements and operational parameters.
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button 
+              onClick={scrollToContact}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
               Discuss Custom Requirements
             </button>
           </div>
