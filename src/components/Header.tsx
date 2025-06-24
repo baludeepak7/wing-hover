@@ -69,11 +69,12 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
       }`}
+      style={{ marginTop: '8px' }}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo Section */}
-          <Link to="/" className="flex items-center space-x-3 group flex-shrink-0 mr-8">
+          <Link to="/" className="flex items-center space-x-4 group flex-shrink-0 mr-12">
             <div className="relative">
               <img src={ShieldPng} alt="WINGHOVER logo" className="w-10 h-10 lg:w-12 lg:h-12" /> 
             </div>
@@ -84,7 +85,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 flex-1 justify-center">
+          <div className="hidden lg:flex items-center space-x-8 xl:space-x-10 flex-1 justify-center">
             {navItems.map((item) => (
               <button
                 key={item.id}
